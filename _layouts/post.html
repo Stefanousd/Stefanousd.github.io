@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+
+  <!--
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/assets/favicon/site.webmanifest" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
+  
+  <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+-->
+  <link rel="stylesheet" href="{{ " /assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /assets/css/custom.css" | prepend: site.baseurl }}">
+
+  <script src="{{ " /assets/js/bootstrap.bundle.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ " /assets/js/jquery-3.7.0.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ " /assets/js/custom_post.js" | prepend: site.baseurl }}"></script>
+
+</head>
+<!--
+  <body style="background: #FFD700; color: #8B0000;">
+-->
+
+<body style="background: #2b2d2f; color: #fff;">
+  <!--
+    <div class="header-logo-login">
+      <span class="logo-header text-center">      
+          <img style="height:100px;width:auto;" alt="Logo Stefanousd" src="{{ "/assets/img/tree.jpg" | prepend: site.baseurl }}">
+      </span>
+      <span>
+        asdasd
+      </span>
+    </div>
+  -->
+  <!--
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        -->
+  <!--
+  <nav style="padding:0.5rem 1rem" class="navbar navbar-expand-sm bg-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">About</a>
+        </li>
+      </ul>
+    </div>
+  -->
+  <!--
+    <div class="styles_CountryLangDropdown__rwWK7 styles_lightCountryLangDropdown__fmRmR">
+      <div class="styles_CountryLangDropdown__rwWK7">
+        <div class="styles_SelectedFlag__GR5ON"><span
+            style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span
+              style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img
+                style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                alt="" aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2726%27%20height=%2726%27/%3e"></span><img
+              alt="gb country" src="/images/countries/circle/gb.svg" decoding="async" data-nimg="intrinsic"
+              style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+              srcset="/images/countries/circle/gb.svg 1x, /images/countries/circle/gb.svg 2x"></span></div>
+        <div class="styles_Caret__qxCRS styles_activeCaret__JSItl"><svg width="10" height="6" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg></div>
+      </div>
+      <div id="language-dropdown" class="undefined">
+        <div class="styles_Dropdown__vg8Xz styles_enteredDropdown__7MbZJ">
+          <div class="styles_CloseIcon__qTv1k"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+              <g fill="none" fill-rule="evenodd" stroke="#1b1b1b" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.308">
+                <path d="m.295.326 15.91 15.91M.295 16.411 16.205.501"></path>
+              </g>
+            </svg></div>
+          <div class="styles_Modal__pMpCI">
+            <div class="styles_ArrowUp__NeZM_"></div>
+            <div class="styles_ModalContent__itk9A">
+              <div class="CopyToggle_LightCopyToggle__IMOH3 CopyToggle_CopyToggle__3iast">
+                <button class="CopyToggle_Button__K6_Sl CopyToggle_ActiveButton__2Ivi1">Language</button>
+              </div>
+              <div class="styles_SelectionTitle__2ZS5v">Select your Language</div>
+              <div class="styles_CountryLangList__GTG9_">
+                <a class="styles_LanguageLink__4t4nf" href="https://monese.com/gb/en">
+                  <div class="styles_Language__NDn32"><img class="styles_LanguageFlag__eTJ_S"
+                      src="/images/countries/circle/en.svg" alt="en flag">
+                    <span class="styles_LanguageTitle__zEVx_">English</span>
+                  </div>
+                </a>
+                <a class="styles_LanguageLink__4t4nf" href="https://monese.com/gb/it">
+                  <div class="styles_Language__NDn32"><img class="styles_LanguageFlag__eTJ_S"
+                      src="/images/countries/circle/it.svg" alt="it flag">
+                    <span class="styles_LanguageTitle__zEVx_">Italiano</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+  <!--
+  </nav>
+-->
+  <div class="component-wrapper">
+    <div class="styles_Wrapper__6ThWr" style="padding-bottom:0px">
+      <div class="styles-NavigationContainer">
+        <div id="nav-transparent" class="styles-transparent">
+          <div id="navigation-desktop" class="styles-NavigationDesktop">
+            <div class="styles-wrapper">
+              <div class="styles-left">
+                <a class="styles_Logo__NRSVM" href="/gb/en">
+                </a>
+                <nav class="styles_NavLinks__gvRpL">
+                  {%if page.language == "br"%}
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/">Home</a>
+                    </span>
+                  </span>
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/artigos">Artigos</a>
+                    </span>
+                  </span>
+                  {% endif %}
+                  {%if page.language == "en"%}
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/">Home</a>
+                    </span>
+                  </span>
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/news">News</a>
+                    </span>
+                  </span>
+                  {% endif %}
+                  {%if page.language == "it" %}
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/">Home</a>
+                    </span>
+                  </span>
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/articoli">Articoli</a>
+                    </span>
+                  </span>
+                  {% endif %}
+                </nav>
+              </div>
+              <div class="styles-right">
+                <div class="styles-CountryLangDropdown">
+                  <div id="countryLangDd" class="styles-CountryLangDropdown">
+                    <div class="styles-SelectedFlag">
+                      {%if page.language == "br"%}
+                      <span
+                        style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                        <span
+                          style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                          <img
+                            style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                            alt="" aria-hidden="true"
+                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2726%27%20height=%2726%27/%3e">
+                        </span>
+                        <img alt="gb country" src="/assets/img/br.svg" decoding="async" data-nimg="intrinsic"
+                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                          srcset="/assets/img/br.svg, /assets/img/br.svg 2x">
+                        <noscript>
+                          <img alt="br country" srcSet="/assets/img/br.svg 1x, /assets/img/br.svg 2x"
+                            src="/assets/img/br.svg" decoding="async" data-nimg="intrinsic"
+                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                            loading="lazy" />
+                        </noscript>
+                      </span>
+                      {% endif %}
+                      {%if page.language == "en"%}
+                      <span
+                        style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                        <span
+                          style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                          <img
+                            style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                            alt="" aria-hidden="true"
+                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2726%27%20height=%2726%27/%3e">
+                        </span>
+                        <img alt="gb country" src="/assets/img/en.svg" decoding="async" data-nimg="intrinsic"
+                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                          srcset="/assets/img/en.svg, /assets/img/en.svg 2x">
+                        <noscript>
+                          <img alt="en country" srcSet="/assets/img/en.svg 1x, /assets/img/en.svg 2x"
+                            src="/assets/img/en.svg" decoding="async" data-nimg="intrinsic"
+                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                            loading="lazy" />
+                        </noscript>
+                      </span>
+                      {% endif %}
+                      {%if page.language == "it"%}
+                      <span
+                        style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                        <span
+                          style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                          <img
+                            style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                            alt="" aria-hidden="true"
+                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2726%27%20height=%2726%27/%3e">
+                        </span>
+                        <img alt="gb country" src="/assets/img/it.svg" decoding="async" data-nimg="intrinsic"
+                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                          srcset="/assets/img/it.svg, /assets/img/it.svg 2x">
+                        <noscript>
+                          <img alt="it country" srcSet="/assets/img/it.svg 1x, /assets/img/it.svg 2x"
+                            src="/assets/img/it.svg" decoding="async" data-nimg="intrinsic"
+                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                            loading="lazy" />
+                        </noscript>
+                      </span>
+                      {% endif %}
+                    </div>
+                    <div id="caret-arrow" class="styles-Caret"><svg width="10" height="6" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg></div>
+                  </div>
+                  <!--
+                  <div id="language-dropdown" class="">
+
+                  </div>
+                -->
+                  <div id="language-dropdown" class="undefined">
+                    <div class="styles-Dropdown styles-enteredDropdown">
+                      <div class="styles-CloseIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                          <g fill="none" fill-rule="evenodd" stroke="#1b1b1b" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.308">
+                            <path d="m.295.326 15.91 15.91M.295 16.411 16.205.501"></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="styles-Modal" style="display:none;">
+                        <div class="styles-ArrowUp"></div>
+                        <div class="styles-ModalContent">
+                          <!--
+                          <div
+                            class="CopyToggle_LightCopyToggle__IMOH3 CopyToggle_CopyToggle__3iast CopyToggle_ClickedCopyToggle__7S9e8">
+                            <button class="CopyToggle_Button__K6_Sl CopyToggle_ActiveButton__2Ivi1">Language</button>
+                            <button class="CopyToggle_Button__K6_Sl">Country</button>
+                          </div>
+                        -->
+                          <div class="styles-SelectionTitle">Select your Language</div>
+                          <div class="styles-CountryLangList">
+                            <a class="styles-LanguageLink" href="/artigos/{{page.name-br}}">
+                              <div class="styles-Language">
+                                <img class="styles-LanguageFlag" src="/assets/img/br.svg" alt="br flag">
+                                <span class="styles-LanguageTitle">Portuguese</span>
+                              </div>
+                            </a>
+                            <a class="styles-LanguageLink" href="/news/{{page.name-en}}">
+                              <div class="styles-Language">
+                                <img class="styles-LanguageFlag" src="/assets/img/en.svg" alt="en flag">
+                                <span class="styles-LanguageTitle">English</span>
+                              </div>
+                            </a>
+                            <a class="styles-LanguageLink" href="/articoli/{{page.name-it}}">
+                              <div class="styles-Language">
+                                <img class="styles-LanguageFlag" src="/assets/img/it.svg" alt="it flag">
+                                <span class="styles-LanguageTitle">Italiano</span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!--
+                <a href="https://web.monese.com" class="styles_LoginLink__WuRvq styles_lightLoginLink__04FtD"><span
+                    class="styles_LoginLinkIcon__IpKko"><svg width="24" height="24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21H3c0-2.575 4.962-4.63 6.37-4.855 1.066-.17.624-1.406.446-1.583-.177-.176-1.562-1.342-1.914-4.374-.1-.858-.332-6.055 3.809-6.185.043 0 .085-.003.149-.003l.14.003c.053 0 .096-.003.14-.003.064 0 .106.002.15.003 4.14.13 3.908 5.327 3.809 6.185-.353 3.032-1.738 4.198-1.915 4.374-.178.177-.62 1.413.447 1.583C16.038 16.37 21 18.425 21 21h-9"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></span><span>Log in</span></a><a
+                  class="styles_InviteAndEarnButton__wvVyu styles_Button__x24PQ styles_outlinedLight__OkSN8 styles_shineAnimation__a5k8u"
+                  href="/gb/en/invite-and-earn"><svg width="24" height="24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11.7H4v8h16v-8ZM21 6.7H3v5h18v-5Z" stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M17.866 6.82c.264-.26.542-.583.834-.968a2.4 2.4 0 0 0-3.393-3.34c-.308.243-1.342 1.265-3.1 3.067M6.381 6.818a6.259 6.259 0 0 1-.893-.968A2.4 2.4 0 0 1 8.88 2.51c.373.294 1.809 1.73 4.307 4.308"
+                      stroke="currentColor" stroke-width="1.5"></path>
+                    <path d="M12 6.7v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                  </svg>Invite and earn</a><button
+                  class="styles_SignUpButton__pw0kf Button_Button__WWX1v Button_Light__3Drk6 Button_IconButton__ehEaA Button_SmallPadding__n6vwv"><span
+                    class="Button_Icon__68d2l Button_IconLeftSide__kh4aq"><svg width="24" height="24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></circle>
+                      <path d="M12 8v8M16 12H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="Button_Copy__wIVEK">Sign up</span></button>
+                  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+        </div>
+      </div>
+    </div>
+    -->
+  <!--
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts/">Posts</a>
+      <a href="/about/">About</a>
+    </nav>
+    -->
+  <div class="container">
+    <!--
+
+        <nav id="breadcrumb-container" class="breadcrumb-container" aria-label="breadcrumb" style="display: none;"><ol class="breadcrumb"></ol></nav>
+      -->
+    <div class="row">
+      <div class="col-2 col-sm-0 col-md-2 col-lg-2"></div>
+      <div class="col-8 col-sm-12 col-md-8 col-lg-8">
+        <h1>{{ page.title }}</h1>
+
+        {%if page.language == "br" and page.title != "Artigos" %}
+        <nav id="breadcrumb-test" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/artigos/"">Artigos</a></li>
+            <li class=" breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+          </ol>
+        </nav>
+        {% endif %}
+
+        {%if page.language == "en" and page.title != "News" %}
+        <nav id="breadcrumb-test" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/news/"">News</a></li>
+            <li class=" breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+          </ol>
+        </nav>
+        {% endif %}
+
+        {%if page.language == "it" and page.title != "Articoli" %}
+        <nav id="breadcrumb-test" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/articoli/"">Articoli</a></li>
+            <li class=" breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+          </ol>
+        </nav>
+        {% endif %}
+
+        {{ content }}
+      </div>
+    </div>
+</body>
+
+</html>

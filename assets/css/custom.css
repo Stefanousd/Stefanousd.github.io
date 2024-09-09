@@ -1,0 +1,260 @@
+/**/
+body a {
+  text-decoration: none;
+}
+
+#preloader {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #2b2d2f;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  margin: .5rem;
+  padding: .5rem;
+  position: absolute;
+  right: 0;
+  z-index: 999
+}
+
+#preloader .load {
+  height: 6rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6rem
+}
+
+#preloader .load hr {
+  animation: a 2s ease infinite;
+  border: 0;
+  height: 40%;
+  margin: 0;
+  position: absolute;
+  width: 40%
+}
+
+#preloader .load :first-child {
+  animation-delay: -1.5s;
+  background: #fff
+}
+
+#preloader .load :nth-child(2) {
+  animation-delay: -1s;
+  background: #1da1f2
+}
+
+#preloader .load :nth-child(3) {
+  animation-delay: -.5s;
+  background: #fff
+}
+
+#preloader .load :last-child {
+  background: #1da1f2
+}
+
+.styles-wrapper {
+  margin: 0 auto;
+  height: 64px;
+  width: 100%;
+  padding: 0 32px;
+  max-width: 1684px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.styles-left,
+.styles-wrapper,
+.styles-right {
+  display: flex;
+  align-items: center;
+}
+
+.styles-CountryLangDropdown {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.styles-NavigationDesktop {
+  transition: background-color .4s var(--rock-dove);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.styles-SelectedFlag {
+  width: 33px;
+}
+
+.styles-LanguageFlag {
+  width: 18px;
+  height: 18px
+}
+
+.component-wrapper {
+  display: block;
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.component-wrapper:first-child {
+  display: block;
+}
+
+.styles-NavigationContainer {
+  display: block;
+  height: 64px;
+}
+
+.styles-transparent .styles-NavigationDesktop {
+  transition: background-color .4s var(--rock-dove);
+  background-color: #2b2d2f;
+  transition: 0.4s;
+}
+
+.styles-visible .styles-NavigationDesktop {
+  transition: background-color .4s var(--rock-dove);
+  background-color: #fff;
+  color: #1b1b1b;
+  transition: 0.4s;
+}
+
+.styles-enteredDropdown {
+  transition: opacity .4s cubic-bezier(0.2, 0, 0.2, 1), top .2s cubic-bezier(0.2, 0, 0.2, 1);
+  top: 0;
+  opacity: 1
+}
+
+.styles-Dropdown {
+  position: absolute;
+  border-radius: 4px;
+  width: 380px;
+  left: -140px
+}
+
+.styles-CloseIcon {
+  display: none;
+  top: 30px;
+  right: 25px;
+  position: absolute;
+  z-index: 999
+}
+
+.styles-Modal {
+  position: absolute;
+  top: 45px;
+  width: 380px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px 0 rgba(33, 14, 74, .1)
+}
+
+.styles-ArrowUp {
+  top: -7px;
+  position: absolute;
+  width: 15px;
+  transform: rotate(45deg);
+  height: 15px;
+  border: none;
+  background: #fff;
+  left: 181px;
+  border-bottom: 0
+}
+
+.styles-ModalContent {
+  padding: 30px;
+  background-color: #fff;
+  cursor: auto;
+  border-radius: 4px;
+  margin: 0 auto
+}
+
+.styles-SelectionTitle {
+  margin-top: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1b1b1b;
+  text-align: center
+}
+
+.styles-CountryLangList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 11px
+}
+
+.styles-LanguageLink {
+  border-radius: 8px;
+  box-shadow: 0;
+  transition: all .4s cubic-bezier(0.2, 0, 0.2, 1);
+  text-align: left;
+  width: 50%;
+  z-index: 1
+}
+
+.styles-LanguageLink:hover {
+  transition: all .4s var(--rock-dove);
+  box-shadow: 0 8px 40px rgba(33, 14, 74, .08);
+  z-index: 99
+}
+
+.styles-Language {
+  width: 105px;
+  padding: 15px 0;
+  color: #1b1b1b;
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  margin: 0 auto
+}
+
+.styles-LanguageFlag {
+  width: 18px;
+  height: 18px
+}
+
+.styles-LanguageTitle {
+  text-align: left;
+  margin-left: 18px;
+  color: #1b1b1b;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px
+}
+
+.styles-activeCaret {
+  animation: styles_caretAnimation__5fp7d .4s forwards
+}
+
+@keyframes styles_caretAnimation__5fp7d {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(180deg)
+  }
+}
+
+@keyframes styles_reverseCaretAnimation__4IQpl {
+  0% {
+    transform: rotate(180deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}

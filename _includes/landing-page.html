@@ -1,110 +1,207 @@
 <div id="landing">
+  <div class="component-wrapper">
+    <div class="styles_Wrapper__6ThWr" style="padding-bottom:0px">
+      <div class="styles-NavigationContainer">
+        <div class="styles-transparent">
+          <div class="styles-NavigationDesktop">
+            <div class="styles-wrapper">
+              <div class="styles-left">
+
+                <a class="styles_Logo__NRSVM" href="/gb/en">
+                </a>
+                <nav class="styles_NavLinks__gvRpL">
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/">Home</a>
+                    </span>
+                  </span>
+                  <span class="styles_NavLinkContainer__AIYti">
+                    <span>
+                      <a class="styles_NavLink__NlrTV" href="/news">News</a>
+                    </span>
+                  </span>
+                </nav>
+
+              </div>
+              <div class="styles-right">
+                <!--
+                <div class="styles-CountryLangDropdown">
+                  <div id="countryLangDd" class="styles-CountryLangDropdown">
+                    <div class="styles-SelectedFlag">
+                      <span
+                        style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                        <span
+                          style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                          <img
+                            style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                            alt="" aria-hidden="true"
+                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2726%27%20height=%2726%27/%3e">
+                        </span>
+                        <img alt="gb country" src="/assets/img/en.svg" decoding="async" data-nimg="intrinsic"
+                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                          srcset="/assets/img/en.svg, /assets/img/en.svg 2x">
+                        <noscript>
+                          <img alt="gb country" srcSet="/assets/img/en.svg 1x, /assets/img/en.svg 2x"
+                            src="/assets/img/en.svg" decoding="async" data-nimg="intrinsic"
+                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                            loading="lazy" />
+                        </noscript>
+                      </span>
+                    </div>
+                    <div id="caret-arrow" class="styles-Caret"><svg width="10" height="6" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg></div>
+                  </div>
+                  <div id="language-dropdown" class="undefined">
+                    <div class="styles-Dropdown styles-enteredDropdown">
+                      <div class="styles-CloseIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                          <g fill="none" fill-rule="evenodd" stroke="#1b1b1b" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.308">
+                            <path d="m.295.326 15.91 15.91M.295 16.411 16.205.501"></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="styles-Modal" style="display:none;">
+                        <div class="styles-ArrowUp"></div>
+                        <div class="styles-ModalContent">
+                <div class="styles-SelectionTitle">Select your Language</div>
+                <div class="styles-CountryLangList">
+                  <a class="styles-LanguageLink" href="https://monese.com/gb/en">
+                    <div class="styles-Language">
+                      <img class="styles-LanguageFlag" src="/assets/img/en.svg" alt="en flag">
+                      <span class="styles-LanguageTitle">English</span>
+                    </div>
+                  </a>
+                  <a class="styles-LanguageLink" href="https://monese.com/gb/it">
+                    <div class="styles-Language">
+                      <img class="styles-LanguageFlag" src="/assets/img/it.svg" alt="it flag">
+                      <span class="styles-LanguageTitle">Italiano</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="landing-title">
     <h1>
       <span>{{site.username}}</span>
       <!-- <span class="highlight-title">{{site.username}}</span> -->
     </h1>
     <h1>
-	    <!--
+      <!--
       <span id="txt-rotate" data-period="2000"
         data-rotate='["{{site.typing_text}}", "scroll down for more."]'			    
       >
       </span>
-	      -->	    
+	      -->
     </h1>
     <div class="landing-icons">
       {% if site.email != null %}
-        <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/solid.svg#envelope" | prepend: site.baseurl }}""></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/solid.svg#envelope" | prepend: site.baseurl }}""></use>
-            </svg>
-          </div>
-          <span class="label">E-Mail</span>
-        </a>
+        </div>
+        <span class="label">E-Mail</span>
+      </a>
       {% endif %}
 
       {% if site.github_username != null %}
-        <a class="social-link" aria-label="My GitHub" target="_blank" rel="noreferrer"
-          href="https://github.com/{{site.github_username}}"
-        >
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link" aria-label="My GitHub" target="_blank" rel="noreferrer"
+        href="https://github.com/{{site.github_username}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/brands.svg#github" | prepend: site.baseurl }}"></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#github" | prepend: site.baseurl }}"></use>
-            </svg>
-          </div>
-          <span class="label">GitHub</span>
-        </a>
+        </div>
+        <span class="label">GitHub</span>
+      </a>
       {% endif %}
 
       {% if site.codepen_username != null %}
-        <a class="social-link" aria-label="My Codepen" target="_blank" rel="noreferrer"
-          href="https://codepen.io/{{site.codepen_username}}"
-        >
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link" aria-label="My Codepen" target="_blank" rel="noreferrer"
+        href="https://codepen.io/{{site.codepen_username}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/brands.svg#codepen" | prepend: site.baseurl }}"></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#codepen" | prepend: site.baseurl }}"></use>
-            </svg>
-          </div>
-          <span class="label">CodePen</span>
-        </a>
+        </div>
+        <span class="label">CodePen</span>
+      </a>
       {% endif %}
 
       {% if site.dev_username != null %}
-        <a class="social-link" aria-label="My DEV" target="_blank" rel="noreferrer"
-          href="https://dev.to/{{site.dev_username}}"
-        >
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link" aria-label="My DEV" target="_blank" rel="noreferrer"
+        href="https://dev.to/{{site.dev_username}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ " /assets/img/brands.svg#dev" |
+              prepend: site.baseurl }}"></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#dev" | prepend: site.baseurl }}"></use>
-            </svg>
-          </div>
-          <span class="label">DEV</span>
-        </a>
+        </div>
+        <span class="label">DEV</span>
+      </a>
       {% endif %}
 
       {% if site.linkedin_username != null %}
-        <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank"
-          rel="noreferrer" href="https://www.linkedin.com/in/{{site.linkedin_username}}"
-        >
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noreferrer"
+        href="https://www.linkedin.com/in/{{site.linkedin_username}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
-            </svg>
-          </div>
-          <span class="label">LinkedIn</span>
-        </a>
+        </div>
+        <span class="label">LinkedIn</span>
+      </a>
       {% endif %}
 
       {% if site.twitter_username != null %}
-        <a class="social-link twitter" aria-label="My Twitter" target="_blank"
-          rel="noreferrer" href="https://twitter.com/{{site.twitter_username}}"
-        >
-          <svg viewBox="0 0 200 200" class="circle">
-            <circle cx="100" cy="100" r="80" />
+      <a class="social-link twitter" aria-label="My Twitter" target="_blank" rel="noreferrer"
+        href="https://twitter.com/{{site.twitter_username}}">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
           </svg>
-          <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
-            </svg>
-          </div>
-          <span class="label">Twitter</span>
-        </a>
+        </div>
+        <span class="label">Twitter</span>
+      </a>
       {% endif %}
     </div>
   </div>

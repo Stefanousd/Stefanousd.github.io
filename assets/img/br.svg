@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Outer circle -->
+  <circle cx="256" cy="256" r="256" fill="#009739"/>
+  <!-- Yellow diamond -->
+  <polygon points="256,50 462,256 256,462 50,256" fill="#FFCC29"/>
+  <!-- Blue circle -->
+  <circle cx="256" cy="256" r="128" fill="#3E4095"/>
+  <!-- White band (placeholder for text) -->
+  <path d="M 150 270 Q 256 210 362 270" stroke="white" stroke-width="20" fill="none"/>
+</svg>
