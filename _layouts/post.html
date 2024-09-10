@@ -265,13 +265,6 @@
                       <div class="styles-Modal" style="display:none;">
                         <div class="styles-ArrowUp"></div>
                         <div class="styles-ModalContent">
-                          <!--
-                          <div
-                            class="CopyToggle_LightCopyToggle__IMOH3 CopyToggle_CopyToggle__3iast CopyToggle_ClickedCopyToggle__7S9e8">
-                            <button class="CopyToggle_Button__K6_Sl CopyToggle_ActiveButton__2Ivi1">Language</button>
-                            <button class="CopyToggle_Button__K6_Sl">Country</button>
-                          </div>
-                        -->
                           <div class="styles-SelectionTitle">Select your Language</div>
                           <div class="styles-CountryLangList">
                             <a class="styles-LanguageLink" href="/artigos/{{page.name-br}}">
@@ -280,12 +273,14 @@
                                 <span class="styles-LanguageTitle">Portuguese</span>
                               </div>
                             </a>
+                            <!--
                             <a class="styles-LanguageLink" href="/news/{{page.name-en}}">
                               <div class="styles-Language">
                                 <img class="styles-LanguageFlag" src="/assets/img/en.svg" alt="en flag">
                                 <span class="styles-LanguageTitle">English</span>
                               </div>
                             </a>
+                            -->
                             <a class="styles-LanguageLink" href="/articoli/{{page.name-it}}">
                               <div class="styles-Language">
                                 <img class="styles-LanguageFlag" src="/assets/img/it.svg" alt="it flag">
@@ -353,7 +348,7 @@
       -->
     <div class="row">
       <div class="col-2 col-sm-0 col-md-2 col-lg-2"></div>
-      <div class="col-8 col-sm-12 col-md-8 col-lg-8">
+      <div class="col-9 col-sm-10 col-md-7 col-lg-5">
         <h1>{{ page.title }}</h1>
 
         {%if page.language == "br" and page.title != "Artigos" %}
