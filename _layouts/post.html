@@ -32,6 +32,69 @@
   <script src="{{ " /assets/js/jquery-3.7.0.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ " /assets/js/custom_post.js" | prepend: site.baseurl }}"></script>
 
+  <style>
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .answers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .answers img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .answers img.selected {
+      border-color: #3498db;
+    }
+
+    .submit-btn,
+    .nav-btn {
+      display: block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover,
+    .nav-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .nav-btn {
+      display: inline-block;
+    }
+
+    #result {
+      display: none;
+    }
+  </style>
+
 </head>
 <!--
   <body style="background: #FFD700; color: #8B0000;">
