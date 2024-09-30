@@ -146,3 +146,9 @@ defaults:
     values:
       permalink: 'artigos/:title'
       language: br
+
+collections:
+  hsp:
+    output: true
+    permalink: /hsp/:title/
+    layout: hsp
