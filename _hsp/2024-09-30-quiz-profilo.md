@@ -7,9 +7,11 @@ name-br: quiz-profilo
 language: it
 ---
 
-<section style="background-color: lightblue; color: darkblue; padding: 10px; border-radius: 10px;">
+<section style="background-color: green; color: darkgreen; padding: 10px; border-radius: 10px;">
   <div class="quiz-container">
-    <h1>Quiz: Scopri il tuo profilo</h1>
+    <!--
+    -->
+    <h1>Scopri il tuo profilo</h1>
     
     <div id="question-container">
         <!-- Qui verrà mostrata una domanda alla volta -->
@@ -187,6 +189,11 @@ language: it
 </script>
 
   <style>
+/* Cambia il colore del testo h1 in verde */
+    h1 {
+      color: green;
+    }
+
     .quiz-container {
       max-width: 800px;
       margin: 0 auto;
@@ -259,6 +266,11 @@ language: it
       color: #3498db;
     }
 
+    .styles-transparent .styles-NavigationDesktop {
+      transition: background-color .4s var(--rock-dove);
+      background-color: #fff;
+      transition: 0.4s;
+    }
 
   </style>
 

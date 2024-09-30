@@ -27,18 +27,60 @@
   <script src="{{ " /assets/js/custom_post.js" | prepend: site.baseurl }}"></script>
   <script src="{{ " /assets/js/swiper-bundle.min.js" | prepend: site.baseurl }}"></script>
 
+  <style>
+    /* Stile del contenitore del logo */
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Stile dell'immagine del logo */
+    .company-logo {
+      max-width: 150px;
+      /* Regola la dimensione massima del logo */
+      height: auto;
+      padding-right: 20px;
+      /* Aggiunge un po' di spazio tra il logo e gli altri elementi */
+    }
+
+    /* Media queries per la responsività del logo */
+    @media (max-width: 768px) {
+      .company-logo {
+        max-width: 120px;
+        /* Riduce il logo sui tablet */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .company-logo {
+        max-width: 100px;
+        /* Riduce ulteriormente il logo sugli smartphone */
+      }
+    }
+  </style>
+
 </head>
 
-<body style="background: #2b2d2f; color: #fff;">
-  <div class="component-wrapper">
-    <div class="styles_Wrapper__6ThWr" style="padding-bottom:0px">
-      <div class="styles-NavigationContainer">
-        <div id="nav-transparent" class="styles-transparent">
-          <div id="navigation-desktop" class="styles-NavigationDesktop">
-            <div class="styles-wrapper">
-              <div class="styles-left">
-                <a class="styles_Logo__NRSVM" href="/gb/en">
+<body style="background: #fff;>
+  <div class=" component-wrapper">
+  <div class="styles_Wrapper__6ThWr" style="padding-bottom:0px">
+    <div class="styles-NavigationContainer">
+      <div id="nav-transparent" class="styles-transparent">
+        <div id="navigation-desktop" class="styles-NavigationDesktop">
+
+
+          <div class="styles-wrapper">
+            <div class="styles-left">
+              <div class="logo-container">
+                <a>
+                  <img src="/assets/img/logo.svg" alt="Logo azienda" class="company-logo">
                 </a>
+              </div>
+              <!--
+                  <a class="styles_Logo__NRSVM">
+                  </a>
+                  -->
+              <!--
                 <nav class="styles_NavLinks__gvRpL">
                   {%if page.language == "br"%}
                   <span class="styles_NavLinkContainer__AIYti">
@@ -77,7 +119,9 @@
                   </span>
                   {% endif %}
                 </nav>
-              </div>
+              -->
+            </div>
+            <!--
               <div class="styles-right">
                 <div class="styles-CountryLangDropdown">
                   <div id="countryLangDd" class="styles-CountryLangDropdown">
@@ -152,11 +196,6 @@
                           stroke-linejoin="round"></path>
                       </svg></div>
                   </div>
-                  <!--
-                  <div id="language-dropdown" class="">
-
-                  </div>
-                -->
                   <div id="language-dropdown" class="undefined">
                     <div class="styles-Dropdown styles-enteredDropdown">
                       <div class="styles-CloseIcon">
@@ -193,11 +232,13 @@
 
                 </div>
               </div>
-            </div>
+            -->
           </div>
+
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="container">
@@ -205,7 +246,7 @@
       <div class="col-1 col-sm-0 col-md-1 col-lg-1"></div>
       <div class="col-12 col-sm-10 col-md-7 col-lg-5">
         <h1>{{ page.title }}</h1>
-
+        <!--
         {%if page.language == "br" and page.title != "Artigos" %}
         <nav id="breadcrumb-test" aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -232,7 +273,7 @@
           </ol>
         </nav>
         {% endif %}
-
+        -->
         {{ content }}
       </div>
     </div>
