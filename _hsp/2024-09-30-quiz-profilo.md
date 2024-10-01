@@ -11,20 +11,22 @@ language: it
   <div class="quiz-container">
     <!--
     -->
-    <h1>Scopri il tuo stile</h1>
-    
-    <div id="question-container">
-        <!-- Qui verrà mostrata una domanda alla volta -->
+    <div class="domande">
+        <h1>Scopri il tuo stile</h1>
+        
+        <div id="question-container">
+            <!-- Qui verrà mostrata una domanda alla volta -->
+        </div>
+        
+        <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">↩️</button>
+        <button class="nav-btn" id="next-btn" onclick="nextQuestion()">✔️</button>
+        <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
     </div>
-    
-    <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">Indietro</button>
-    <button class="nav-btn" id="next-btn" onclick="nextQuestion()">Avanti</button>
-    <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
-
     <div id="result">
+        <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 350px; height: auto; display: block; margin: 0 auto;">
         <h2>Il tuo profilo è: <span id="profile-result"></span></h2>
         <p id="profile-description"></p>
-        <h3>Curiosità:</h3>
+        <!--<h3>Curiosità:</h3>-->
         <p id="profile-curiosita"></p>
         <h3>Punteggio:</h3>
         <p id="profile-score"></p>
@@ -46,22 +48,22 @@ language: it
         },
         { 
             question: "Quale di queste cucine sembra la più funzionale per il tuo stile di vita?",
-            answers: ["/assets/img/quiz/domandaC_cucine/cucine1.png", "/assets/img/quiz/domandaC_cucine/cucine2.png", "/assets/img/quiz/domandaC_cucine/cucine3.png", "/assets/img/quiz/domandaC_cucine/cucine4.png", "/assets/img/quiz/domandaC_cucine/cucine5.png", "/assets/img/quiz/domandaC_cucine/cucine6.png", "/assets/img/quiz/domandaC_cucine/cucine7.png"],
+            answers: ["/assets/img/quiz/domandaC_cucina/cucina1.png", "/assets/img/quiz/domandaC_cucina/cucina2.png", "/assets/img/quiz/domandaC_cucina/cucina3.png", "/assets/img/quiz/domandaC_cucina/cucina4.png", "/assets/img/quiz/domandaC_cucina/cucina5.png", "/assets/img/quiz/domandaC_cucina/cucina6.png", "/assets/img/quiz/domandaC_cucina/cucina7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi ambienti di lavoro ti fa sentire più produttivo?",
-            answers: ["/assets/img/quiz/domandaD_DDD/DDD1.png", "/assets/img/quiz/domandaD_DDD/DDD2.png", "/assets/img/quiz/domandaD_DDD/DDD3.png", "/assets/img/quiz/domandaD_DDD/DDD4.png", "/assets/img/quiz/domandaD_DDD/DDD5.png", "/assets/img/quiz/domandaD_DDD/DDD6.png", "/assets/img/quiz/domandaD_DDD/DDD7.png"],
+            answers: ["/assets/img/quiz/domandaD_studio/studio1.png", "/assets/img/quiz/domandaD_studio/studio2.png", "/assets/img/quiz/domandaD_studio/studio3.png", "/assets/img/quiz/domandaD_studio/studio4.png", "/assets/img/quiz/domandaD_studio/studio5.png", "/assets/img/quiz/domandaD_studio/studio6.png", "/assets/img/quiz/domandaD_studio/studio7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di queste sale da pranzo sarebbe lo spazio perfetto per un pasto in famiglia?",
-            answers: ["/assets/img/quiz/domandaE_EEE/EEE1.png", "/assets/img/quiz/domandaE_EEE/EEE2.png", "/assets/img/quiz/domandaE_EEE/EEE3.png", "/assets/img/quiz/domandaE_EEE/EEE4.png", "/assets/img/quiz/domandaE_EEE/EEE5.png", "/assets/img/quiz/domandaE_EEE/EEE6.png", "/assets/img/quiz/domandaE_EEE/EEE7.png"],
+            answers: ["/assets/img/quiz/domandaE_pranzo/pranzo1.png", "/assets/img/quiz/domandaE_pranzo/pranzo2.png", "/assets/img/quiz/domandaE_pranzo/pranzo3.png", "/assets/img/quiz/domandaE_pranzo/pranzo4.png", "/assets/img/quiz/domandaE_pranzo/pranzo5.png", "/assets/img/quiz/domandaE_pranzo/pranzo6.png", "/assets/img/quiz/domandaE_pranzo/pranzo7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi bagni ti fa sentire più rinvigorito?",
-            answers: ["/assets/img/quiz/domandaF_FFF/FFF1.png", "/assets/img/quiz/domandaF_FFF/FFF2.png", "/assets/img/quiz/domandaF_FFF/FFF3.png", "/assets/img/quiz/domandaF_FFF/FFF4.png", "/assets/img/quiz/domandaF_FFF/FFF5.png", "/assets/img/quiz/domandaF_FFF/FFF6.png", "/assets/img/quiz/domandaF_FFF/FFF7.png"],
+            answers: ["/assets/img/quiz/domandaF_bagno/bagno1.png", "/assets/img/quiz/domandaF_bagno/bagno2.png", "/assets/img/quiz/domandaF_bagno/bagno3.png", "/assets/img/quiz/domandaF_bagno/bagno4.png", "/assets/img/quiz/domandaF_bagno/bagno5.png", "/assets/img/quiz/domandaF_bagno/bagno6.png", "/assets/img/quiz/domandaF_bagno/bagno7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
@@ -215,6 +217,9 @@ function submitQuiz() {
 
     // Prende il profilo dall'array profiles
     const resultProfile = profiles[resultProfileIndex];
+
+    // Nasconde il contenuto del quiz e i pulsanti
+    document.querySelector(".domande").style.display = "none";
 
     // Mostra il risultato insieme al punteggio totale
     const resultElement = document.getElementById("result");
