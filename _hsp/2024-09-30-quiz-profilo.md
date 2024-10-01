@@ -23,7 +23,7 @@ language: it
         <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
     </div>
     <div id="result">
-        <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 350px; height: auto; display: block; margin: 0 auto;">
+        <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 320px; height: auto; display: block; margin: 0 auto;">
         <h2>Il tuo profilo è: <span id="profile-result"></span></h2>
         <p id="profile-description"></p>
         <!--<h3>Curiosità:</h3>-->
@@ -68,12 +68,12 @@ language: it
         },
         { 
             question: "Quale di questi elementi decorativi vorresti avere a casa tua?",
-            answers: ["/assets/img/quiz/domandaG_GGG/GGG1.png", "/assets/img/quiz/domandaG_GGG/GGG2.png", "/assets/img/quiz/domandaG_GGG/GGG3.png", "/assets/img/quiz/domandaG_GGG/GGG4.png", "/assets/img/quiz/domandaG_GGG/GGG5.png", "/assets/img/quiz/domandaG_GGG/GGG6.png", "/assets/img/quiz/domandaG_GGG/GGG7.png"],
+            answers: ["/assets/img/quiz/domandaG_elemento/elemento1.png", "/assets/img/quiz/domandaG_elemento/elemento2.png", "/assets/img/quiz/domandaG_elemento/elemento3.png", "/assets/img/quiz/domandaG_elemento/elemento4.png", "/assets/img/quiz/domandaG_elemento/elemento5.png", "/assets/img/quiz/domandaG_elemento/elemento6.png", "/assets/img/quiz/domandaG_elemento/elemento7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi spazi esterni ti fa venir voglia di trascorrere più tempo all'aperto?",
-            answers: ["/assets/img/quiz/domandaH_HHH/HHH1.png", "/assets/img/quiz/domandaH_HHH/HHH2.png", "/assets/img/quiz/domandaH_HHH/HHH3.png", "/assets/img/quiz/domandaH_HHH/HHH4.png", "/assets/img/quiz/domandaH_HHH/HHH5.png", "/assets/img/quiz/domandaH_HHH/HHH6.png", "/assets/img/quiz/domandaH_HHH/HHH7.png"],
+            answers: ["/assets/img/quiz/domandaH_esterno/esterno1.png", "/assets/img/quiz/domandaH_esterno/esterno2.png", "/assets/img/quiz/domandaH_esterno/esterno3.png", "/assets/img/quiz/domandaH_esterno/esterno4.png", "/assets/img/quiz/domandaH_esterno/esterno5.png", "/assets/img/quiz/domandaH_esterno/esterno6.png", "/assets/img/quiz/domandaH_esterno/esterno7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         },
         { 
