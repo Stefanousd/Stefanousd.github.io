@@ -41,8 +41,10 @@ language: it
             <p id="profile-description"></p>
             <!--<h3>Curiosità:</h3>-->
             <p id="profile-curiosita"></p>
+            <!--
             <h3>Punteggio:</h3>
             <p id="profile-score"></p>
+            -->
         </div>
     </div>
 
@@ -92,6 +94,11 @@ language: it
             question: "Quale di queste palette di colori ti farebbe sentire più in pace nel tuo soggiorno?",
             answers: ["/assets/img/quiz/domandaI_palette/palette2.png", "/assets/img/quiz/domandaI_palette/palette7.png", "/assets/img/quiz/domandaI_palette/palette3.png", "/assets/img/quiz/domandaI_palette/palette6.png", "/assets/img/quiz/domandaI_palette/palette1.png", "/assets/img/quiz/domandaI_palette/palette4.png", "/assets/img/quiz/domandaI_palette/palette5.png"],
             scores: [2, 7, 3, 6, 1, 4, 5] // Punteggi assegnati per ogni risposta
+        },
+        { 
+            question: "Hai finito il quiz!",
+            answers: ["/assets/img/quiz/domandaI_palette/palette2.png", "/assets/img/quiz/domandaI_palette/palette7.png", "/assets/img/quiz/domandaI_palette/palette3.png", "/assets/img/quiz/domandaI_palette/palette6.png", "/assets/img/quiz/domandaI_palette/palette1.png", "/assets/img/quiz/domandaI_palette/palette4.png", "/assets/img/quiz/domandaI_palette/palette5.png"],
+            scores: [0, 0, 0, 0, 0, 0, 0] // Punteggi assegnati per ogni risposta
         }
     ];
 
@@ -113,62 +120,108 @@ language: it
         const questionContainer = document.getElementById("question-container");
         questionContainer.innerHTML = ""; // Pulisce il contenuto corrente
 
-        const questionElement = document.createElement("div");
-        questionElement.classList.add("question");
-        
-        const questionTitle = document.createElement("h3");
-        questionTitle.textContent = `${questionIndex + 1}. ${questions[questionIndex].question}`;
-        questionElement.appendChild(questionTitle);
+        if (questionIndex !== 9) {
+            const questionElement = document.createElement("div");
+            questionElement.classList.add("question");
+            
+            const questionTitle = document.createElement("h3");
+            questionTitle.textContent = `${questionIndex + 1}. ${questions[questionIndex].question}`;
+            questionElement.appendChild(questionTitle);
 
-        // Istruzione per scorrere
-        const instruction = document.createElement("p");
-        instruction.textContent = "Scorri a destra o a sinistra per vedere altri stili";
-        instruction.style.fontStyle = "italic";
-        questionElement.appendChild(instruction);
-        
-        // Creazione dello slider
-        const swiperContainer = document.createElement("div");
-        swiperContainer.classList.add("swiper-container");
-        
-        const swiperWrapper = document.createElement("div");
-        swiperWrapper.classList.add("swiper-wrapper");
+            // Istruzione per scorrere
+            const instruction = document.createElement("p");
+            instruction.textContent = "Scorri a destra o a sinistra per vedere altri stili";
+            instruction.style.fontStyle = "italic";
+            questionElement.appendChild(instruction);
+            
+            // Creazione dello slider
+            const swiperContainer = document.createElement("div");
+            swiperContainer.classList.add("swiper-container");
+            
+            const swiperWrapper = document.createElement("div");
+            swiperWrapper.classList.add("swiper-wrapper");
 
-        // Aggiungi le immagini alle slide
-        questions[questionIndex].answers.forEach((answer, i) => {
-            const slide = document.createElement("div");
-            slide.classList.add("swiper-slide");
-            const img = document.createElement("img");
-            img.src = answer;
-            img.alt = answer.split('/').pop();
-            img.dataset.profile = i;
-            img.onclick = () => selectAnswer(questionIndex, i);
-            slide.appendChild(img);
-            swiperWrapper.appendChild(slide);
-        });
+            // Aggiungi le immagini alle slide
+            questions[questionIndex].answers.forEach((answer, i) => {
+                const slide = document.createElement("div");
+                slide.classList.add("swiper-slide");
+                const img = document.createElement("img");
+                img.src = answer;
+                img.alt = answer.split('/').pop();
+                img.dataset.profile = i;
+                img.onclick = () => selectAnswer(questionIndex, i);
+                slide.appendChild(img);
+                swiperWrapper.appendChild(slide);
+            });
 
-        swiperContainer.appendChild(swiperWrapper);
-        questionElement.appendChild(swiperContainer);
-        questionContainer.appendChild(questionElement);
-        
-        // Inizializza Swiper
-        swiper = new Swiper(swiperContainer, {
-            loop: false,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            on: {
-                slideChange: function () {
-                    // Aggiorna la risposta selezionata in base alla slide corrente
-                    const currentIndex = swiper.activeIndex;
-                    questions[questionIndex].selectedProfile = currentIndex;
+            swiperContainer.appendChild(swiperWrapper);
+            questionElement.appendChild(swiperContainer);
+            questionContainer.appendChild(questionElement);
+            
+            // Inizializza Swiper
+            swiper = new Swiper(swiperContainer, {
+                loop: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    slideChange: function () {
+                        // Aggiorna la risposta selezionata in base alla slide corrente
+                        const currentIndex = swiper.activeIndex;
+                        questions[questionIndex].selectedProfile = currentIndex;
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            const questionElement = document.createElement("div");
+            questionElement.classList.add("question");
+  /*          
+            const questionTitle = document.createElement("h3");
+            questionTitle.textContent = `${questionIndex + 1}. ${questions[questionIndex].question}`;
+            questionElement.appendChild(questionTitle);
+*/
+/*
+            // Istruzione per scorrere
+            const instruction = document.createElement("p");
+            instruction.textContent = "Scorri a destra o a sinistra per vedere altri stili";
+            instruction.style.fontStyle = "italic";
+            questionElement.appendChild(instruction);
+            */
+            // Creazione dello slider
+            const swiperContainer = document.createElement("div");
+            swiperContainer.classList.add("swiper-container");
+            
+            const swiperWrapper = document.createElement("div");
+            swiperWrapper.classList.add("swiper-wrapper");
+
+            // Creazione dell'elemento immagine
+            const imageElement = document.createElement("img");
+            imageElement.src = "/assets/img/quiz/last.jpg"; // Inserisci qui il tuo percorso immagine locale
+            imageElement.alt = "Descrizione dell'immagine"; // Aggiungi una descrizione per l'attributo alt
+
+            swiperContainer.appendChild(imageElement);
+            questionElement.appendChild(swiperContainer);
+            questionContainer.appendChild(questionElement);
+            
+            /*
+            // Creazione del div contenente l'immagine
+            const imageContainer = document.createElement("div");
+            imageContainer.classList.add("question");
+
+            // Creazione dell'elemento immagine
+            const imageElement = document.createElement("img");
+            imageElement.src = "/assets/img/quiz/last.jpg"; // Inserisci qui il tuo percorso immagine locale
+            imageElement.alt = "Descrizione dell'immagine"; // Aggiungi una descrizione per l'attributo alt
+
+            // Aggiungi l'immagine al container
+            imageContainer.appendChild(imageElement);
+            */
+        }
         
         // Controllo visibilità pulsanti
         document.getElementById("prev-btn").style.display = questionIndex > 0 ? "inline-block" : "none";
@@ -243,12 +296,12 @@ function submitQuiz() {
     const profileResult = document.getElementById("profile-result");
     const profileDescription = document.getElementById("profile-description");
     const profileCuriosita = document.getElementById("profile-curiosita"); 
-    const profileScore = document.getElementById("profile-score"); 
+    //const profileScore = document.getElementById("profile-score"); 
 
     profileResult.textContent = resultProfile.color;
     profileDescription.textContent = `${resultProfile.description}`;
     profileCuriosita.textContent = `${resultProfile.curiosita}`;
-    profileScore.textContent = `Hai ottenuto un punteggio di ${totalScore}.`;
+    //profileScore.textContent = `Hai ottenuto un punteggio di ${totalScore}.`;
     resultElement.style.display = "block";
 }
 
