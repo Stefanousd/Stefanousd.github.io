@@ -61,7 +61,7 @@ body a {
   margin: 0 auto;
   height: 64px;
   width: 100%;
-  padding: 0 32px;
+  padding: 0 8px;
   max-width: 1684px;
   justify-content: space-between;
   position: relative;
@@ -71,6 +71,7 @@ body a {
 .styles-wrapper,
 .styles-right {
   display: flex;
+  height="64" style="width: auto; max-width: 100%;"
   align-items: center;
 }
 

@@ -1,6 +1,6 @@
 ---
 layout: hsp
-title: Come vivi la tua casa?
+title: Paula Ribas
 name-en: quiz-profilo
 name-it: quiz-profilo
 name-br: quiz-profilo
@@ -12,15 +12,28 @@ language: it
     <!--
     -->
     <div class="domande">
+        <!--
         <h1>Scopri il tuo stile</h1>
-        
+        -->
+        <h1>Per <b>vivere</b> la casa al <b>meglio</b>, <b>scopri</b> che stile di arredamento <b>hai</b>!</h1>
         <div id="question-container">
             <!-- Qui verrà mostrata una domanda alla volta -->
         </div>
-        
-        <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">↩️</button>
-        <button class="nav-btn" id="next-btn" onclick="nextQuestion()">✔️</button>
-        <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
+        <!--
+        -->
+        <div class="button-container">
+            <div id="prev-btn-container">
+                <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">↩️</button>
+            </div>
+            <div id="next-btn-container">
+                <button class="nav-btn" id="next-btn" onclick="nextQuestion()">✔️</button>
+            </div>
+            <div id="submit-btn-container">
+                <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
+            </div>
+        </div>
+        <!-- 
+        -->
     </div>
     <div id="result">
         <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 320px; height: auto; display: block; margin: 0 auto;">
@@ -78,7 +91,7 @@ language: it
         },
         { 
             question: "Quale di queste palette di colori ti farebbe sentire più in pace nel tuo soggiorno?",
-            answers: ["/assets/img/quiz/domandaI_III/III1.png", "/assets/img/quiz/domandaI_III/III2.png", "/assets/img/quiz/domandaI_III/III3.png", "/assets/img/quiz/domandaI_III/III4.png", "/assets/img/quiz/domandaI_III/III5.png", "/assets/img/quiz/domandaI_III/III6.png", "/assets/img/quiz/domandaI_III/III7.png"],
+            answers: ["/assets/img/quiz/domandaI_palette/palette1.png", "/assets/img/quiz/domandaI_palette/palette2.png", "/assets/img/quiz/domandaI_palette/palette3.png", "/assets/img/quiz/domandaI_palette/palette4.png", "/assets/img/quiz/domandaI_palette/palette5.png", "/assets/img/quiz/domandaI_palette/palette6.png", "/assets/img/quiz/domandaI_palette/palette7.png"],
             scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
         }
     ];
@@ -110,7 +123,7 @@ language: it
 
         // Istruzione per scorrere
         const instruction = document.createElement("p");
-        instruction.textContent = "Scorri a destra o a sinistra per vedere di più.";
+        instruction.textContent = "Scorri a destra o a sinistra per vedere altri stili";
         instruction.style.fontStyle = "italic";
         questionElement.appendChild(instruction);
         
@@ -240,7 +253,8 @@ function submitQuiz() {
 </script>
 
   <style>
-/* Cambia il colore del testo h1 in verde */
+
+    /* Cambia il colore del testo h1 in verde */
     h1 {
       color: green;
     }
@@ -267,7 +281,8 @@ function submitQuiz() {
     /* Stile per il contenitore Swiper */
     .swiper-container {
       width: 100%;
-      height: 250px;
+      /*height: auto;*/
+      height: 300px;
       overflow: hidden;
       position: relative;
     }
@@ -277,8 +292,8 @@ function submitQuiz() {
       justify-content: center;
       align-items: center;
       cursor: pointer;
-    width: 80%; /* Mostra solo il 80% di ogni slide */
-    margin: 0 auto;
+      width: 80%; /* Mostra solo il 80% di ogni slide */
+      margin: 0 auto;
     }
 
     /* Stile per le immagini */
@@ -286,7 +301,7 @@ function submitQuiz() {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 10px;
+      /*border-radius: 10px;*/
     }
 
     .submit-btn,
@@ -294,7 +309,7 @@ function submitQuiz() {
       display: block;
       margin: 20px auto;
       padding: 10px 20px;
-      background-color: #3498db;
+      background-color: green;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -304,7 +319,7 @@ function submitQuiz() {
 
     .submit-btn:hover,
     .nav-btn:hover {
-      background-color: #2980b9;
+      background-color: darkgreen;
     }
 
     #result {
@@ -322,6 +337,64 @@ function submitQuiz() {
       background-color: #fff;
       transition: 0.4s;
     }
+
+    .button-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between; /* Cambia da center a space-between */
+        align-items: center;
+        margin-top: 20px;
+        height: 50px; /* Mantieni un'altezza fissa per garantire l'allineamento */
+    }
+
+    #prev-btn-container {
+        flex: 1; /* Permette al contenitore di occupare spazio */
+    }
+
+    #next-btn-container {
+        flex: 1; /* Permette al contenitore di occupare spazio */
+        display: flex;
+        justify-content: center; /* Centra il pulsante "Next" */
+    }
+
+    #submit-btn-container {
+        flex: 1; /* Permette al contenitore di occupare spazio */
+        display: flex;
+        justify-content: center; /* Centra il pulsante "Submit" */
+    }
+
+    #next-btn {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #prev-btn {
+        background-color: green;
+        color: white;
+        padding: 5px 10px; /* Riduce la dimensione del bottone */
+        border: none;
+        border-radius: 5px;
+        font-size: 14px; /* Font più piccolo */
+        cursor: pointer;
+        /*margin-right: 10px;*/
+        /*margin-left: 50px;*/
+    }
+
+    #next-btn:hover,
+    #prev-btn:hover {
+        background-color: darkgreen;
+    }
+
+img {
+  width: 100%; /* Fai in modo che l'immagine occupi tutta la larghezza del contenitore */
+  height: auto; /* Mantieni le proporzioni originali */
+  object-fit: contain; /* Assicura che l'immagine venga visualizzata completamente */
+}
 
   </style>
 
