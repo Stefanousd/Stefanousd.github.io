@@ -1,6 +1,6 @@
 ---
 layout: hsp
-title: Paula Ribas
+title: Quiz
 name-en: quiz-profilo
 name-it: quiz-profilo
 name-br: quiz-profilo
@@ -8,91 +8,90 @@ language: it
 ---
 
 <section style="background-color: green; color: darkgreen; padding: 10px; border-radius: 10px;">
-  <div class="quiz-container">
-    <!--
-    -->
-    <div class="domande">
-        <!--
-        <h1>Scopri il tuo stile</h1>
-        -->
-        <h1>Per <b>vivere</b> la casa al <b>meglio</b>, <b>scopri</b> che stile di arredamento <b>hai</b>!</h1>
-        <div id="question-container">
-            <!-- Qui verrà mostrata una domanda alla volta -->
+    <div class="quiz-container">
+        <div class="inizia-quiz">
+            <h1>Per <b>vivere</b> la casa al <b>meglio</b>, <b>scopri</b> che stile di arredamento <b>hai</b>!</h1>
+            <button class="nav-btn" id="inizia-btn" onclick="showQuiz()" style="">Inizia il quiz</button>
         </div>
-        <!--
-        -->
-        <div class="button-container">
-            <div id="prev-btn-container">
-                <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">↩️</button>
+        <div class="domande" hidden>
+            <div id="question-container">
+                <!-- Qui verrà mostrata una domanda alla volta -->
             </div>
-            <div id="next-btn-container">
-                <button class="nav-btn" id="next-btn" onclick="nextQuestion()">✔️</button>
-            </div>
-            <div id="submit-btn-container">
-                <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
+            <div class="button-container">
+                <div id="prev-btn-container">
+                    <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" style="display:none;">
+                        <img src="/assets/img/undo2.svg" alt="Previous" style="width: 20px; height: 20px;" />
+                    </button>
+                </div>
+                <div id="next-btn-container">
+                    <button class="nav-btn" id="next-btn" onclick="nextQuestion()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M9 19c-.5 0-1-.2-1.4-.6l-5-5c-.8-.8-.8-2 0-2.8s2-.8 2.8 0l3.6 3.6L18.6 5.6c.8-.8 2-.8 2.8 0s.8 2 0 2.8l-10 10c-.4.4-.9.6-1.4.6z" fill="lightgreen" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="submit-btn-container">
+                    <button class="submit-btn" id="submit-btn" onclick="submitQuiz()" style="display:none;">Scopri il risultato</button>
+                </div>
             </div>
         </div>
-        <!-- 
-        -->
+        <div id="result">
+            <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 320px; height: auto; display: block; margin: 0 auto;">
+            <h2>Il tuo profilo è: <span id="profile-result"></span></h2>
+            <p id="profile-description"></p>
+            <!--<h3>Curiosità:</h3>-->
+            <p id="profile-curiosita"></p>
+            <h3>Punteggio:</h3>
+            <p id="profile-score"></p>
+        </div>
     </div>
-    <div id="result">
-        <img src="/assets/img/quiz/meme.jpg" alt="Meme" style="width: 320px; height: auto; display: block; margin: 0 auto;">
-        <h2>Il tuo profilo è: <span id="profile-result"></span></h2>
-        <p id="profile-description"></p>
-        <!--<h3>Curiosità:</h3>-->
-        <p id="profile-curiosita"></p>
-        <h3>Punteggio:</h3>
-        <p id="profile-score"></p>
-    </div>
-
-  </div>
 
 <script>
     const questions = [
         { 
             question: "Quale di questi ambienti ti fa sentire più rilassato?",
-            answers: ["/assets/img/quiz/domandaA_soggiorno/soggiorno1.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno2.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno3.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno4.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno5.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno6.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaA_soggiorno/soggiorno5.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno2.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno7.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno4.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno1.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno6.png", "/assets/img/quiz/domandaA_soggiorno/soggiorno3.png"],
+            scores: [5, 2, 7, 4, 1, 6, 3] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale stile di camera da letto sceglieresti per sentirti più accogliente?",
-            answers: ["/assets/img/quiz/domandaB_camere/camere1.png", "/assets/img/quiz/domandaB_camere/camere2.png", "/assets/img/quiz/domandaB_camere/camere3.png", "/assets/img/quiz/domandaB_camere/camere4.png", "/assets/img/quiz/domandaB_camere/camere5.png", "/assets/img/quiz/domandaB_camere/camere6.png", "/assets/img/quiz/domandaB_camere/camere7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaB_camere/camere3.png", "/assets/img/quiz/domandaB_camere/camere2.png", "/assets/img/quiz/domandaB_camere/camere7.png", "/assets/img/quiz/domandaB_camere/camere5.png", "/assets/img/quiz/domandaB_camere/camere4.png", "/assets/img/quiz/domandaB_camere/camere6.png", "/assets/img/quiz/domandaB_camere/camere1.png"],
+            scores: [3, 2, 7, 5, 4, 6, 1] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di queste cucine sembra la più funzionale per il tuo stile di vita?",
-            answers: ["/assets/img/quiz/domandaC_cucina/cucina1.png", "/assets/img/quiz/domandaC_cucina/cucina2.png", "/assets/img/quiz/domandaC_cucina/cucina3.png", "/assets/img/quiz/domandaC_cucina/cucina4.png", "/assets/img/quiz/domandaC_cucina/cucina5.png", "/assets/img/quiz/domandaC_cucina/cucina6.png", "/assets/img/quiz/domandaC_cucina/cucina7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaC_cucina/cucina2.png", "/assets/img/quiz/domandaC_cucina/cucina4.png", "/assets/img/quiz/domandaC_cucina/cucina3.png", "/assets/img/quiz/domandaC_cucina/cucina1.png", "/assets/img/quiz/domandaC_cucina/cucina7.png", "/assets/img/quiz/domandaC_cucina/cucina5.png", "/assets/img/quiz/domandaC_cucina/cucina6.png"],
+            scores: [2, 4, 3, 1, 7, 5, 6] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi ambienti di lavoro ti fa sentire più produttivo?",
-            answers: ["/assets/img/quiz/domandaD_studio/studio1.png", "/assets/img/quiz/domandaD_studio/studio2.png", "/assets/img/quiz/domandaD_studio/studio3.png", "/assets/img/quiz/domandaD_studio/studio4.png", "/assets/img/quiz/domandaD_studio/studio5.png", "/assets/img/quiz/domandaD_studio/studio6.png", "/assets/img/quiz/domandaD_studio/studio7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaD_studio/studio1.png", "/assets/img/quiz/domandaD_studio/studio5.png", "/assets/img/quiz/domandaD_studio/studio3.png", "/assets/img/quiz/domandaD_studio/studio6.png", "/assets/img/quiz/domandaD_studio/studio2.png", "/assets/img/quiz/domandaD_studio/studio4.png", "/assets/img/quiz/domandaD_studio/studio7.png"],
+            scores: [1, 5, 3, 6, 2, 4, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di queste sale da pranzo sarebbe lo spazio perfetto per un pasto in famiglia?",
-            answers: ["/assets/img/quiz/domandaE_pranzo/pranzo1.png", "/assets/img/quiz/domandaE_pranzo/pranzo2.png", "/assets/img/quiz/domandaE_pranzo/pranzo3.png", "/assets/img/quiz/domandaE_pranzo/pranzo4.png", "/assets/img/quiz/domandaE_pranzo/pranzo5.png", "/assets/img/quiz/domandaE_pranzo/pranzo6.png", "/assets/img/quiz/domandaE_pranzo/pranzo7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaE_pranzo/pranzo1.png", "/assets/img/quiz/domandaE_pranzo/pranzo2.png", "/assets/img/quiz/domandaE_pranzo/pranzo6.png", "/assets/img/quiz/domandaE_pranzo/pranzo5.png", "/assets/img/quiz/domandaE_pranzo/pranzo4.png", "/assets/img/quiz/domandaE_pranzo/pranzo3.png", "/assets/img/quiz/domandaE_pranzo/pranzo7.png"],
+            scores: [1, 2, 6, 5, 4, 3, 7] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi bagni ti fa sentire più rinvigorito?",
-            answers: ["/assets/img/quiz/domandaF_bagno/bagno1.png", "/assets/img/quiz/domandaF_bagno/bagno2.png", "/assets/img/quiz/domandaF_bagno/bagno3.png", "/assets/img/quiz/domandaF_bagno/bagno4.png", "/assets/img/quiz/domandaF_bagno/bagno5.png", "/assets/img/quiz/domandaF_bagno/bagno6.png", "/assets/img/quiz/domandaF_bagno/bagno7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaF_bagno/bagno4.png", "/assets/img/quiz/domandaF_bagno/bagno7.png", "/assets/img/quiz/domandaF_bagno/bagno3.png", "/assets/img/quiz/domandaF_bagno/bagno1.png", "/assets/img/quiz/domandaF_bagno/bagno5.png", "/assets/img/quiz/domandaF_bagno/bagno6.png", "/assets/img/quiz/domandaF_bagno/bagno2.png"],
+            scores: [4, 7, 3, 1, 5, 6, 2] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi elementi decorativi vorresti avere a casa tua?",
-            answers: ["/assets/img/quiz/domandaG_elemento/elemento1.png", "/assets/img/quiz/domandaG_elemento/elemento2.png", "/assets/img/quiz/domandaG_elemento/elemento3.png", "/assets/img/quiz/domandaG_elemento/elemento4.png", "/assets/img/quiz/domandaG_elemento/elemento5.png", "/assets/img/quiz/domandaG_elemento/elemento6.png", "/assets/img/quiz/domandaG_elemento/elemento7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaG_elemento/elemento7.png", "/assets/img/quiz/domandaG_elemento/elemento4.png", "/assets/img/quiz/domandaG_elemento/elemento5.png", "/assets/img/quiz/domandaG_elemento/elemento2.png", "/assets/img/quiz/domandaG_elemento/elemento3.png", "/assets/img/quiz/domandaG_elemento/elemento6.png", "/assets/img/quiz/domandaG_elemento/elemento1.png"],
+            scores: [7, 4, 5, 2, 3, 6, 1] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di questi spazi esterni ti fa venir voglia di trascorrere più tempo all'aperto?",
-            answers: ["/assets/img/quiz/domandaH_esterno/esterno1.png", "/assets/img/quiz/domandaH_esterno/esterno2.png", "/assets/img/quiz/domandaH_esterno/esterno3.png", "/assets/img/quiz/domandaH_esterno/esterno4.png", "/assets/img/quiz/domandaH_esterno/esterno5.png", "/assets/img/quiz/domandaH_esterno/esterno6.png", "/assets/img/quiz/domandaH_esterno/esterno7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaH_esterno/esterno6.png", "/assets/img/quiz/domandaH_esterno/esterno3.png", "/assets/img/quiz/domandaH_esterno/esterno2.png", "/assets/img/quiz/domandaH_esterno/esterno7.png", "/assets/img/quiz/domandaH_esterno/esterno5.png", "/assets/img/quiz/domandaH_esterno/esterno1.png", "/assets/img/quiz/domandaH_esterno/esterno4.png"],
+            scores: [6, 3, 2, 7, 5, 1, 4] // Punteggi assegnati per ogni risposta
         },
         { 
             question: "Quale di queste palette di colori ti farebbe sentire più in pace nel tuo soggiorno?",
-            answers: ["/assets/img/quiz/domandaI_palette/palette1.png", "/assets/img/quiz/domandaI_palette/palette2.png", "/assets/img/quiz/domandaI_palette/palette3.png", "/assets/img/quiz/domandaI_palette/palette4.png", "/assets/img/quiz/domandaI_palette/palette5.png", "/assets/img/quiz/domandaI_palette/palette6.png", "/assets/img/quiz/domandaI_palette/palette7.png"],
-            scores: [1, 2, 3, 4, 5, 6, 7] // Punteggi assegnati per ogni risposta
+            answers: ["/assets/img/quiz/domandaI_palette/palette2.png", "/assets/img/quiz/domandaI_palette/palette7.png", "/assets/img/quiz/domandaI_palette/palette3.png", "/assets/img/quiz/domandaI_palette/palette6.png", "/assets/img/quiz/domandaI_palette/palette1.png", "/assets/img/quiz/domandaI_palette/palette4.png", "/assets/img/quiz/domandaI_palette/palette5.png"],
+            scores: [2, 7, 3, 6, 1, 4, 5] // Punteggi assegnati per ogni risposta
         }
     ];
 
@@ -197,6 +196,11 @@ language: it
             currentQuestion--;
             loadQuestion(currentQuestion);
         }
+    }
+    
+    function showQuiz() {
+        document.querySelector(".inizia-quiz").style.display = "none";
+        document.querySelector(".domande").removeAttribute("hidden");
     }
 
     // Funzione per calcolare il risultato

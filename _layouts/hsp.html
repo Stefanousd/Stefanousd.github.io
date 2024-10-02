@@ -61,6 +61,16 @@
 
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0YRZS2JVF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-W0YRZS2JVF');
+</script>
+
 <body style="background: #fff;>
   <div class=" component-wrapper">
   <div class="styles_Wrapper__6ThWr" style="padding-bottom:0px">
@@ -246,7 +256,7 @@
     <div class="row">
       <div class="col-1 col-sm-0 col-md-1 col-lg-1"></div>
       <div class="col-12 col-sm-10 col-md-7 col-lg-5">
-        <h1>{{ page.title }}</h1>
+        <h1 style="text-align: center;">{{ page.title }}</h1>
         <!--
         {%if page.language == "br" and page.title != "Artigos" %}
         <nav id="breadcrumb-test" aria-label="breadcrumb">
