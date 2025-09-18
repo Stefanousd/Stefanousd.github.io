@@ -19,5 +19,5 @@ Con il tuo sorriso sincero e benigno,<br>
 illumini il mondo, parabéns, amorzinho!<br>
 
 </p>
-
+<img src="/assets/img/raccoon_bday.png" alt="raccoon" width="300px"/>
 </p> </section>
